@@ -1,0 +1,7 @@
+{
+    "username": "example_user",
+    "email": "user@example.com",
+    "public_key": "user_public_key",
+    // other user-related data
+  }
+  

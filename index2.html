@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    <title>Tokenized Carbon Credits Marketplace</title>
+
+    <style>
+        /* Your existing styles here */
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #232323, #3a3a3a);
+            color: #fff;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navigation a:hover {
+            color: #00ff00;
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+        }
+
+        .content-section {
+            padding: 40px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .content-section h2 {
+            color: #00ff00;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .content-section p {
+            color: #ccc;
+            font-size: 1.2em;
+        }
+
+        .bitcoin-symbol {
+            position: fixed;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            font-size: 3em;
+            color: #ffd700;
+            z-index: 2;
+        }
+
+        header {
+            position: relative;
+        }
+
+        /* Updated User Info Styles */
+        eader {
+            position: relative;
+        }
+
+        /* Updated Header Styles */
+        h1 {
+            margin: 0;
+            font-size: 3em;
+            color: #00ff00;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Updated User Info Styles */
+        #user-info {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            text-align: right;
+            color: #fff;
+            transition: opacity 0.3s ease-in-out;
+            z-index: 1000;
+        }
+
+        /* Updated Logout Button Styles */
+        #logout-btn {
+            cursor: pointer;
+            color: #fff;
+            background-color: #ff5733;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #logout-btn:hover {
+            background-color: #d65135;
+        }
+
+
+       .featured-section {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .featured-item {
+            text-align: center;
+            width: 250px; /* Set a fixed width */
+            height: 500px; /* Set a fixed height */
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 20px;
+            transition: transform 0.3s ease-in-out;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .featured-item:hover {
+            transform: scale(1.1); /* Zoom effect upon hover */
+        }
+
+        .featured-item h3 {
+            color: #00ff00;
+            font-size: 1.5em; /* Adjusted font size */
+            margin-bottom: 10px;
+        }
+
+        .featured-item p {
+            color: #ccc;
+            font-size: 1em; /* Adjusted font size */
+            max-height: 120px; /* Increased max height for the description */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.2; /* Increased line height for better readability */
+        }
+
+        .featured-item img {
+            width: 100%;
+            height: 60%; /* Adjusted height for the image */
+            object-fit: cover; /* Maintain aspect ratio for the image */
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .featured-item:hover img {
+            transform: scale(1.2);
+        }
+
+        /* Additional 
+
+        /* Additional Styles */
+
+        .cta-section {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        .cta-section h2 {
+            color: #00ff00;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            color: #ccc;
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        .cta-button {
+            cursor: pointer;
+            color: #fff;
+            background: linear-gradient(135deg, #00ff00, #007700);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 20px;
+            font-size: 1.5em;
+            transition: background-color 0.3s ease-in-out;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, #007700, #004400);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 5px solid #00ff00;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+              <h1>Carbon Credits Marketplace</h1>
+        <div id="user-info">
+            <p id="welcome-message">Welcome, <span id="user-name"></span>!</p>
+            <button id="logout-btn" onclick="logout()">Logout</button>
+            </div>
+            <div class="navigation">
+                <a href="index2.html">Home</a>
+                <a href="settings.html">Settings</a>
+                <a href="index4.html">Referrals</a>
+                <a href="leader.html">Leaderboard</a>
+                <a href="#">Wallet</a>
+                <a href="index5.html">Rewards</a>
+                <a href="index3.html">Calculator</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="bitcoin-symbol">
+        <span><i class="fas fa-btc"></i></span>
+    </div>
+
+    <main>
+        <section class="content-section">
+            <h2>Tokenized Carbon Credits for a Greener Tomorrow</h2>
+            <p>Buy and sell carbon credits to offset your carbon footprint and contribute to a sustainable future.</p>
+        </section>
+
+        <!-- Featured Items Section -->
+        <section class="featured-section">
+            <div class="featured-item">
+                <img src="http://www.kohoku.co.jp/common/images/logo/logo_carbon_offset_full.png" alt="Placeholder Image 1">
+                <h3>Project 1</h3>
+                <h3>Carbon Offset Projects</h3>
+                <p>Explore innovative projects that are making a positive impact on the environment.</p>
+            </div>
+            <div class="featured-item">
+                <img src="https://cbx-prod.b-cdn.net/COLOURBOX5344142.jpg?width=1600&height=1600&quality=90" alt="Placeholder Image 2">
+                <h3>Eco-Friendly Products</h3>
+                <p>Discover and support products designed with sustainability in mind.</p>
+            </div>
+            <div class="featured-item">
+                <img src="https://imagineerremodeling.com/wp-content/uploads/2016/03/Mi-GREEN-ENERGY-Logo-480x480.png" alt="Placeholder Image 3">
+                <h3>Green Energy Solutions</h3>
+                <p>Learn about the latest advancements in renewable energy and green technologies.</p>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <h2>Join Us in Building a Sustainable Future</h2>
+            <p>Get involved in the movement towards a cleaner planet. Sign up now and be part of the change!</p>
+            <button class="cta-button" onclick="window.location.href='#'">Get Started</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Carbon Credits Marketplace. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let authenticatedUser = null;
+
+        function isAuthenticated() {
+            return authenticatedUser !== null;
+        }
+
+        function displayUserInfo() {
+            const userNameElement = document.getElementById("user-name");
+
+            if (isAuthenticated()) {
+                userNameElement.textContent = authenticatedUser.username;
+            }
+        }
+
+        function logout() {
+            authenticatedUser = null;
+            window.location.href = "index.html";
+            displayUserInfo();
+        }
+
+        displayUserInfo();
+    </script>
+</body>
+
+</html>

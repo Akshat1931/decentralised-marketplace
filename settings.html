@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #000000;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #00FF00; /* Green color for the title */
+        }
+
+        .settings-container {
+            width: 80%;
+            margin-top: 20px;
+        }
+
+        .setting-item {
+            background-color: #00FF00;
+            color: #000000;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 2px solid;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .toggle-button {
+            width: 40px;
+            height: 20px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 2px;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-button.active {
+            background-color: #000000;
+        }
+
+        .setting-label {
+            font-size: 16px;
+        }
+    </style>
+    <title>Settings Page</title>
+</head>
+<body>
+
+    <div class="title">Settings</div>
+
+    <div class="settings-container">
+        <div class="setting-item">
+            <div class="setting-label">Theme</div>
+            <div class="toggle-button active"></div>
+        </div>
+        <div class="setting-item">
+            <div class="setting-label">Order Notifications</div>
+            <div class="toggle-button"></div>
+        </div>
+        <div class="setting-item">
+            <div class="setting-label">Accessibility</div>
+            <div class="toggle-button active"></div>
+        </div>
+        <div class="setting-item">
+            <div class="setting-label">Fullscreen</div>
+            <div class="toggle-button"></div>
+        </div>
+        <div class="setting-item">
+            <div class="setting-label">Logout</div>
+            <div class="toggle-button"></div>
+        </div>
+        <div class="setting-item">
+            <div class="setting-label">Sticky Pins</div>
+            <div class="toggle-button active"></div>
+        </div>
+        <div class="setting-item">
+            <div class="setting-label">Battery Optimization</div>
+            <div class="toggle-button"></div>
+        </div>
+        <div class="setting-item">
+            <div class="setting-label">Charts</div>
+            <div class="toggle-button active"></div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    <title>Referral Rewards - Carbon Credits Marketplace</title>
+
+    <style>
+        /* Your existing styles here */
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #000, #00ff00); /* Black to Green gradient */
+            color: #0f0; /* Green text color */
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #0f0;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navigation a:hover {
+            color: #fff; /* White on hover for better visibility */
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+        }
+
+        .content-section {
+            padding: 40px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .content-section h2 {
+            color: #0f0; /* Green heading color */
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .content-section p {
+            color: #ccc;
+            font-size: 1.2em;
+        }
+
+        /* Updated User Info Styles */
+        #user-info {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            text-align: right;
+            color: #0f0;
+            transition: opacity 0.3s ease-in-out;
+            z-index: 1000;
+        }
+
+        /* Updated Logout Button Styles */
+        #logout-btn {
+            cursor: pointer;
+            color: #0f0;
+            background-color: #333; /* Dark background for contrast */
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #logout-btn:hover {
+            background-color: #555; /* Darker background on hover */
+        }
+
+        /* Additional Styles... */
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Carbon Credits Marketplace</h1>
+            <div id="user-info">
+                <p id="welcome-message">Welcome, <span id="user-name"></span>!</p>
+                <button id="logout-btn" onclick="logout()">Logout</button>
+            </div>
+            <div class="navigation">
+                <a href="#">Home</a>
+                <a href="#">Settings</a>
+                <a href="#">Referrals</a>
+                <a href="#">Leaderboard</a>
+                <a href="#">Wallet</a>
+                <a href="#">Rewards</a>
+                <a href="index3.html">Calculator</a>
+                <!-- Add more navigation links as needed -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h2>Referral Rewards Program</h2>
+            <p>Invite your friends to join and earn exciting rewards. Help us grow and contribute to a greener tomorrow!</p>
+            <!-- Add referral rewards content here -->
+            <div class="reward-box">
+            <div class="reward-icon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <h3>Level 1 Reward</h3>
+            <p>Invite 5 friends</p>
+            <p>Earn a special badge</p>
+        </div>
+
+        <div class="reward-box">
+            <div class="reward-icon">
+                <i class="fas fa-gift"></i>
+            </div>
+            <h3>Level 2 Reward</h3>
+            <p>Invite 10 friends</p>
+            <p>Get a 10% discount on your next purchase</p>
+        </div>
+
+        <div class="reward-box">
+            <div class="reward-icon">
+                <i class="fas fa-leaf"></i>
+            </div>
+            <h3>Level 3 Reward</h3>
+            <p>Invite 20 friends</p>
+            <p>Receive a personalized eco-friendly gift</p>
+        </div>
+<div class="user-id-box">
+            <h3>Your Referral Code</h3>
+            <p>Your unique ID: <span id="user-id">ABC123</span></p>
+            <p>Share this code with your friends to earn rewards!</p>
+        </div>
+        </section>
+
+    </main>
+
+    <!-- Add your existing scripts or new functionality scripts here -->
+
+    <script>
+        // Your existing scripts...
+    </script>
+</body>
+
+</html>
